@@ -186,8 +186,7 @@ This project is licensed under **MIT License**.
 
 ## ✉️ Contact
 
-If you need help integrating backend APIs, improving UI, or adding
-payment gateway support---feel free to ask!
+annirajashekhara@gmail.com
 
 ------------------------------------------------------------------------
 # this project is uploaded to git youcan verify it by using github link given below
