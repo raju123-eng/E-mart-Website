@@ -106,7 +106,7 @@ order management, reviews, and secure authentication.
 
 ### **1️⃣ Clone the Project**
 
-    git clone https://github.com/yourusername/emart.git
+    git clone https://github.com/raju123-eng/E-mart-Website/tree/main/emart
     cd emart
 
 ### **2️⃣ Create a Virtual Environment**
