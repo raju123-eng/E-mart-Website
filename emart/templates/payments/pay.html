@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3>Pay ₹{{ amount }}</h3>
+<form id="payment-form" method="POST">
+  {% csrf_token %}
+  <script src="https://checkout.razorpay.com/v1/checkout.js"
+    data-key="{{ razorpay_key }}"
+    data-amount="{{ razorpay_order.amount }}"
+    data-currency="INR"
+    data-order_id="{{ razorpay_order.id }}"
+    data-buttontext="Pay with Razorpay"
+    data-name="EMART"
+    data-description="Order {{ order.id }}"
+    ></script>
+</form>
+{% endblock %}

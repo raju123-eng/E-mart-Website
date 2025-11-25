@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3>Your Cart</h3>
+<table class="table">
+<thead><tr><th>Product</th><th>Qty</th><th>Subtotal</th></tr></thead>
+<tbody>
+{% for item in items %}
+<tr>
+  <td>{{ item.product.title }}</td>
+  <td>{{ item.quantity }}</td>
+  <td>₹{{ item.subtotal }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+<p><strong>Total: ₹{{ total }}</strong></p>
+<a class="btn btn-success" href="{% url 'checkout' %}">Checkout</a>
+{% endblock %}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EMART - Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body { font-family: Arial; margin: 0; background: #f4f4f4; }
+        .navbar { background: #222; padding: 15px; color: white; display: flex; justify-content: space-between; align-items: center; }
+        .navbar .logo { font-size: 22px; font-weight: bold; }
+        .navbar a { color: white; text-decoration: none; margin-left: 20px; }
+
+        .products { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; padding: 20px; }
+        .product { background: white; padding: 15px; border-radius: 10px; box-shadow: 0 0 5px rgba(0,0,0,0.2); }
+        .product img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; }
+        .product h3 { margin: 10px 0; }
+        .price { color: green; font-weight: bold; }
+
+        footer { background: #222; padding: 20px; color: white; text-align: center; margin-top: 20px; }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div class="logo">EMART</div>
+
+        <div>
+            <a href="/users/login/">Login</a>
+            <a href="/users/register/">Register</a>
+            <a href="/cart/"><i class="fa fa-shopping-cart"></i> Cart</a>
+        </div>
+    </div>
+
+
+    <h2 style="padding: 20px;">Latest Products</h2>
+
+    <div class="products">
+        {% for p in products %}
+        <div class="product">
+            <img src="{{ p.image.url }}" alt="">
+            <h3>{{ p.name }}</h3>
+            <p class="price">₹{{ p.price }}</p>
+        </div>
+        {% empty %}
+        <p>No products available yet.</p>
+        {% endfor %}
+    </div>
+
+    <footer>© 2025 EMART - All Rights Reserved</footer>
+
+</body>
+</html>
